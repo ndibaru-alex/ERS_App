@@ -5,6 +5,11 @@ import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   plugins: [react(),tailwindcss()],
+  //   base: '/',               // serve assets from root
+  // build: {
+  //   outDir: 'dist',        // Vercel expects a production-ready folder
+  //   emptyOutDir: true      // clean before each build
+  // },
   server: {
     port: 5174,
     host: true,
@@ -32,5 +37,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
 
 });
